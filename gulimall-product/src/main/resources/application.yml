@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password: root123456
+    url: jdbc:mysql://192.168.56.10:3306/gulimall_pms
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      max-lifetime: 50000
+#告知mybatis-plus去哪里找mapper文件
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+#配置自增主键，这样实体上的tableid注解就不用挨个配置了
+  global-config:
+    db-config:
+      id-type: auto
